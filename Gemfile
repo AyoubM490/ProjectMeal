@@ -71,4 +71,10 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'rufo'
+gem "rufo"
+gem "htmlbeautifier"
+gem "bootstrap", "~> 5.2.0"
+gem "jquery-rails"
+
+gem "devise"
+gem "sendgrid-ruby"
