@@ -61,21 +61,6 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  config.action_mailer.default_options = { from: "ayoub.chahir96@gmail.com" }
-  config.action_mailer.default_url_options = { host: "localhost:3000" }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.smtp_settings = {
-    address: "smtp.sendgrid.net",
-    port: 465,
-    domain: "localhost:3000",
-    user_name: "apikey",
-    password: "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",
-    authentication: "plain",
-    enable_starttls_auto: true,
-  }
-
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
