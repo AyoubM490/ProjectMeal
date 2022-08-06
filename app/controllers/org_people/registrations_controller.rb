@@ -12,8 +12,6 @@ class OrgPeople::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    UserNotifierMailer.send_signup_email(resource).deliver
-    # redirect_to(resource, :notice => "User created")
   end
 
   # GET /resource/edit
