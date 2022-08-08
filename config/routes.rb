@@ -4,7 +4,7 @@ Rails.application.routes.draw do
                             :sessions => "org_people/sessions",
                             :passwords => "org_people/passwords",
                           }
-  devise_for :users, controllers: { confirmations: "confirmations" }
+  devise_for :org_people, controllers: { confirmations: "confirmations" }
 
   devise_scope :org_person do
     get "signup", to: "org_people/registrations#new"
