@@ -3,8 +3,8 @@ Rails.application.routes.draw do
                             :registrations => "org_people/registrations",
                             :sessions => "org_people/sessions",
                             :passwords => "org_people/passwords",
+                            :confirmations => "confirmations",
                           }
-  devise_for :org_people, controllers: { confirmations: "confirmations" }
 
   devise_scope :org_person do
     get "signup", to: "org_people/registrations#new"
