@@ -70,7 +70,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :user_name => "apikey",
     :password => Rails.application.credentials.dig(:sendgrid, :password), # This is the secret sendgrid API key which was issued during API key creation
-    :domain => "app-project-meal1.herokuapp.com",
+    :domain => "heroku.com",
     :address => "smtp.sendgrid.net",
     :port => 587,
     :authentication => :plain,
