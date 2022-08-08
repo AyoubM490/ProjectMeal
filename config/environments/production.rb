@@ -63,18 +63,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "ProjectMeal_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: "https://app-project-meal.herokuapp.com/" }
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.smtp_settings = {
-    :user_name => ENV["SENDGRID_USERNAME"], # This is the string literal 'apikey', NOT the ID of your API key
-    :password => ENV["SENDGRID_PASSWORD"], # This is the secret sendgrid API key which was issued during API key creation
-    :domain => "https://app-project-meal.herokuapp.com",
-    :address => "smtp.sendgrid.net",
-    :port => 465,
-    :authentication => :plain,
-    :enable_starttls_auto => true,
-  }
+  config.action_mailer.default_url_options = { host: "https://app-project-meal.herokuapp.com/" }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
